@@ -1,0 +1,116 @@
+{
+  "schema_version": "day09-l3b-output-v2",
+  "case_id": "L3B_CASE_019",
+  "assessment": {
+    "primary_issue": "payment_mismatch",
+    "secondary_issues": [
+      "late_delivery_seller"
+    ],
+    "case_status": "action_required",
+    "confidence": 0.8708
+  },
+  "affected_entities": {
+    "order_ids": [
+      "c4dad201936ed30eef3c94fafa59ed6e"
+    ],
+    "item_ids": [
+      "item-c4dad201936e"
+    ],
+    "seller_ids": [
+      "seller-c4dad201936e"
+    ],
+    "payment_references": [
+      "1"
+    ],
+    "shipment_ids": []
+  },
+  "entity_resolution": {
+    "status": "resolved",
+    "resolved_order_ids": [
+      "c4dad201936ed30eef3c94fafa59ed6e"
+    ],
+    "rejected_candidates": [],
+    "confidence": 1.0
+  },
+  "customer_context": {
+    "customer_unique_id": null,
+    "related_order_ids": []
+  },
+  "shipment_analysis": {
+    "verdict": "seller_delay",
+    "late_seller_ids": [
+      "seller-c4dad201936e"
+    ],
+    "timeline_complete": false
+  },
+  "payment_analysis": {
+    "verdict": "capture_mismatch",
+    "captured_total_brl": 89.0,
+    "refunded_total_brl": null,
+    "refundable_total_brl": 89.0
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "PAYMENT_CAPTURE_MISMATCH",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "payment_provider",
+        "party_id": null
+      }
+    ]
+  },
+  "evidence_refs": [
+    "ev_7mEQR5qcRlO0Kvw5hdKxMQGpQHaWhr9V",
+    "ev_pTsj1uu_hkBagKMvFKBO-j0CFefABWqd",
+    "ev_DTp0IP4sGApWUMobT1L12sAvxt1rdkhP",
+    "ev_Yw2Rg4DzaPcYGiWdcZlDRXJYsUaN7kmh",
+    "ev_TuAqg728vu4LSLVWGax6WcEwAH4wZgfl",
+    "ev_PwWXpArvRaJbOnZhZesRfokGkpzbv3gb",
+    "ev_Ax194L3Wo30BvINBnZehoIIvT_TbEz7c",
+    "ev_Jm7RY719C6-Xry0e6wKcvQkcw35QemUR"
+  ],
+  "data_conflicts": [],
+  "financial_resolution": {
+    "currency": "BRL",
+    "recommended_refund_brl": 35.0,
+    "refund_lines": [
+      {
+        "reason_code": "payment_mismatch",
+        "amount_brl": 35.0,
+        "entity_id": "c4dad201936ed30eef3c94fafa59ed6e"
+      }
+    ]
+  },
+  "resolution_actions": [
+    "reconcile_payment"
+  ],
+  "claim_assessments": [
+    {
+      "claim_id": "claim-019-a",
+      "verdict": "insufficient_evidence",
+      "confidence": 0.12,
+      "evidence_refs": [
+        "ev_7mEQR5qcRlO0Kvw5hdKxMQGpQHaWhr9V",
+        "ev_pTsj1uu_hkBagKMvFKBO-j0CFefABWqd",
+        "ev_DTp0IP4sGApWUMobT1L12sAvxt1rdkhP",
+        "ev_Yw2Rg4DzaPcYGiWdcZlDRXJYsUaN7kmh",
+        "ev_PwWXpArvRaJbOnZhZesRfokGkpzbv3gb",
+        "ev_Jm7RY719C6-Xry0e6wKcvQkcw35QemUR"
+      ]
+    },
+    {
+      "claim_id": "claim-019-b",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "evidence_refs": [
+        "ev_PwWXpArvRaJbOnZhZesRfokGkpzbv3gb",
+        "ev_Jm7RY719C6-Xry0e6wKcvQkcw35QemUR",
+        "ev_Ax194L3Wo30BvINBnZehoIIvT_TbEz7c"
+      ]
+    }
+  ]
+}

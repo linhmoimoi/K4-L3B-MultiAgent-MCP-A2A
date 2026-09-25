@@ -20,7 +20,7 @@ htmlcov/
 case-set.json
 inputs/*
 !inputs/.gitkeep
-outputs/*
+# outputs/*
 !outputs/.gitkeep
 traces/*
 !traces/.gitkeep

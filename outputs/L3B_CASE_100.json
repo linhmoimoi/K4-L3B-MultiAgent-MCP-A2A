@@ -1,0 +1,111 @@
+{
+  "schema_version": "day09-l3b-output-v2",
+  "case_id": "L3B_CASE_100",
+  "assessment": {
+    "primary_issue": "canceled_order_paid",
+    "secondary_issues": [
+      "late_delivery_seller"
+    ],
+    "case_status": "action_required",
+    "confidence": 0.8708
+  },
+  "affected_entities": {
+    "order_ids": [
+      "9b75cdaf2d85857ef023980e15d01546"
+    ],
+    "item_ids": [
+      "item-9b75cdaf2d85"
+    ],
+    "seller_ids": [
+      "seller-9b75cdaf2d85"
+    ],
+    "payment_references": [
+      "1"
+    ],
+    "shipment_ids": []
+  },
+  "entity_resolution": {
+    "status": "resolved",
+    "resolved_order_ids": [
+      "9b75cdaf2d85857ef023980e15d01546"
+    ],
+    "rejected_candidates": [],
+    "confidence": 1.0
+  },
+  "customer_context": {
+    "customer_unique_id": null,
+    "related_order_ids": []
+  },
+  "shipment_analysis": {
+    "verdict": "seller_delay",
+    "late_seller_ids": [
+      "seller-9b75cdaf2d85"
+    ],
+    "timeline_complete": false
+  },
+  "payment_analysis": {
+    "verdict": "reconciled",
+    "captured_total_brl": 97.0,
+    "refunded_total_brl": null,
+    "refundable_total_brl": 97.0
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "CANCELED_ORDER_PAID",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "platform",
+        "party_id": null
+      }
+    ]
+  },
+  "evidence_refs": [
+    "ev_zEbbutKXy3Tz4Ieg7koMiWhJUFyqowPk",
+    "ev_xd5V_uAkQyvTO3fhcrsHXclLGfMgMw6i",
+    "ev_0YjYUbfoKhpvcHj9Fw59b23MEa95DSwX",
+    "ev_P_OSfultlg2dW4p71pZUTxm6QPIlf-2p",
+    "ev_oomtrB7PPWJMkig5FmCJnuuk_8bVwWp6",
+    "ev_lje2ENaB-9rM4M21EWu7BhZ1SVPOluSL",
+    "ev_6QDtwXkxWSOh8rdp83zjoWpppkaLp0X3",
+    "ev_IvonvY66AlBzZDvkG49zoQJeUfqZNC4j"
+  ],
+  "data_conflicts": [],
+  "financial_resolution": {
+    "currency": "BRL",
+    "recommended_refund_brl": 79.0,
+    "refund_lines": [
+      {
+        "reason_code": "canceled_order_paid",
+        "amount_brl": 79.0,
+        "entity_id": "9b75cdaf2d85857ef023980e15d01546"
+      }
+    ]
+  },
+  "resolution_actions": [
+    "issue_refund"
+  ],
+  "claim_assessments": [
+    {
+      "claim_id": "claim-100-a",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "evidence_refs": [
+        "ev_lje2ENaB-9rM4M21EWu7BhZ1SVPOluSL"
+      ]
+    },
+    {
+      "claim_id": "claim-100-b",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "evidence_refs": [
+        "ev_oomtrB7PPWJMkig5FmCJnuuk_8bVwWp6",
+        "ev_IvonvY66AlBzZDvkG49zoQJeUfqZNC4j",
+        "ev_6QDtwXkxWSOh8rdp83zjoWpppkaLp0X3"
+      ]
+    }
+  ]
+}

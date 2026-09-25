@@ -1,0 +1,109 @@
+{
+  "schema_version": "day09-l3b-output-v2",
+  "case_id": "L3B_CASE_093",
+  "assessment": {
+    "primary_issue": "refund_pending",
+    "secondary_issues": [
+      "late_delivery_seller"
+    ],
+    "case_status": "needs_investigation",
+    "confidence": 0.95
+  },
+  "affected_entities": {
+    "order_ids": [
+      "23c312ca9f0242a48a95e5643bee2645"
+    ],
+    "item_ids": [
+      "item-23c312ca9f02"
+    ],
+    "seller_ids": [
+      "seller-23c312ca9f02"
+    ],
+    "payment_references": [
+      "1"
+    ],
+    "shipment_ids": []
+  },
+  "entity_resolution": {
+    "status": "resolved",
+    "resolved_order_ids": [
+      "23c312ca9f0242a48a95e5643bee2645"
+    ],
+    "rejected_candidates": [],
+    "confidence": 1.0
+  },
+  "customer_context": {
+    "customer_unique_id": null,
+    "related_order_ids": []
+  },
+  "shipment_analysis": {
+    "verdict": "seller_delay",
+    "late_seller_ids": [
+      "seller-23c312ca9f02"
+    ],
+    "timeline_complete": true
+  },
+  "payment_analysis": {
+    "verdict": "refund_pending",
+    "captured_total_brl": 124.0,
+    "refunded_total_brl": 0.0,
+    "refundable_total_brl": 124.0
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "REFUND_PENDING",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "payment_provider",
+        "party_id": null
+      }
+    ]
+  },
+  "evidence_refs": [
+    "ev_2mOok1Qo4qYXoPlTJnjF4roN37OJKe0X",
+    "ev_7uloYOwS_YkGlherp2Tg1_iCHs6Ac5G6",
+    "ev_HoXRLyUX8VG1liQegX6Oif4QW0ltgcZ7",
+    "ev_T85C-C9mMEVQBAMzT2BH2pYJrLNJVmDa",
+    "ev_OghonSs8vM98LZaegdX1Ua8c8DNTHHti",
+    "ev_Y7m9GS667Si8J78ccS_UOLDC10OXh778",
+    "ev_OkUdVMb4Hplrjn2CC7NTZ1qPoBcfjO1a",
+    "ev_WkBhi8DmcOTkXIL1qTjXzlskaF1t2UBv",
+    "ev_kdNETf3rFOJxRon1-3vAq4hW6wW8msc8"
+  ],
+  "data_conflicts": [],
+  "financial_resolution": {
+    "currency": "BRL",
+    "recommended_refund_brl": 0.0,
+    "refund_lines": []
+  },
+  "resolution_actions": [
+    "collect_additional_evidence"
+  ],
+  "claim_assessments": [
+    {
+      "claim_id": "claim-093-a",
+      "verdict": "insufficient_evidence",
+      "confidence": 0.12,
+      "evidence_refs": [
+        "ev_OkUdVMb4Hplrjn2CC7NTZ1qPoBcfjO1a",
+        "ev_WkBhi8DmcOTkXIL1qTjXzlskaF1t2UBv",
+        "ev_kdNETf3rFOJxRon1-3vAq4hW6wW8msc8"
+      ]
+    },
+    {
+      "claim_id": "claim-093-b",
+      "verdict": "insufficient_evidence",
+      "confidence": 0.12,
+      "evidence_refs": [
+        "ev_OkUdVMb4Hplrjn2CC7NTZ1qPoBcfjO1a",
+        "ev_WkBhi8DmcOTkXIL1qTjXzlskaF1t2UBv",
+        "ev_kdNETf3rFOJxRon1-3vAq4hW6wW8msc8",
+        "ev_Y7m9GS667Si8J78ccS_UOLDC10OXh778"
+      ]
+    }
+  ]
+}

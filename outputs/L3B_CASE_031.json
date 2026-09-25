@@ -1,0 +1,99 @@
+{
+  "schema_version": "day09-l3b-output-v2",
+  "case_id": "L3B_CASE_031",
+  "assessment": {
+    "primary_issue": "unsupported_claim",
+    "secondary_issues": [],
+    "case_status": "no_action",
+    "confidence": 0.9183
+  },
+  "affected_entities": {
+    "order_ids": [
+      "96087ef44ca9abdbc4c372a3dd3c859f"
+    ],
+    "item_ids": [
+      "item-96087ef44ca9"
+    ],
+    "seller_ids": [
+      "seller-96087ef44ca9"
+    ],
+    "payment_references": [
+      "1"
+    ],
+    "shipment_ids": []
+  },
+  "entity_resolution": {
+    "status": "resolved",
+    "resolved_order_ids": [
+      "96087ef44ca9abdbc4c372a3dd3c859f"
+    ],
+    "rejected_candidates": [],
+    "confidence": 1.0
+  },
+  "customer_context": {
+    "customer_unique_id": null,
+    "related_order_ids": []
+  },
+  "shipment_analysis": {
+    "verdict": "on_time",
+    "late_seller_ids": [],
+    "timeline_complete": true
+  },
+  "payment_analysis": {
+    "verdict": "reconciled",
+    "captured_total_brl": 105.0,
+    "refunded_total_brl": null,
+    "refundable_total_brl": 105.0
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "UNSUPPORTED_CLAIM",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "customer",
+        "party_id": null
+      }
+    ]
+  },
+  "evidence_refs": [
+    "ev_pehuPkpcE0JJ9_DaelX6S0BuNZygRlxS",
+    "ev_Xxxmtlq-6oTWLoxeAEIExU5Qo1Thz7Wt",
+    "ev_oH6RL843Zmf9y_SNw5h7pGeFqlQNzlvs",
+    "ev_5gF7-XDC4k8IblF4DStJhyubvFEARpnK",
+    "ev_L6W5WGxYL7dl11FBnH3oGgI2nH4Uc5V0",
+    "ev_Vhiu1JiJ32LX_u1AZu-hTSsl5xGXXOCU",
+    "ev_IxQw4Df6cBjTrRhTOjjWZsupECx3ty6T",
+    "ev_waaj8EJc8vR6HTc3LA21eNfMLUPBrnhs"
+  ],
+  "data_conflicts": [],
+  "financial_resolution": {
+    "currency": "BRL",
+    "recommended_refund_brl": 0.0,
+    "refund_lines": []
+  },
+  "resolution_actions": [],
+  "claim_assessments": [
+    {
+      "claim_id": "claim-031-a",
+      "verdict": "unsupported",
+      "confidence": 0.76,
+      "evidence_refs": [
+        "ev_L6W5WGxYL7dl11FBnH3oGgI2nH4Uc5V0"
+      ]
+    },
+    {
+      "claim_id": "claim-031-b",
+      "verdict": "insufficient_evidence",
+      "confidence": 0.12,
+      "evidence_refs": [
+        "ev_IxQw4Df6cBjTrRhTOjjWZsupECx3ty6T",
+        "ev_waaj8EJc8vR6HTc3LA21eNfMLUPBrnhs",
+        "ev_Vhiu1JiJ32LX_u1AZu-hTSsl5xGXXOCU"
+      ]
+    }
+  ]
+}

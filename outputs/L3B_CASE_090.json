@@ -1,0 +1,107 @@
+{
+  "schema_version": "day09-l3b-output-v2",
+  "case_id": "L3B_CASE_090",
+  "assessment": {
+    "primary_issue": "canceled_order_paid",
+    "secondary_issues": [],
+    "case_status": "action_required",
+    "confidence": 0.8708
+  },
+  "affected_entities": {
+    "order_ids": [
+      "113e41a438f06ffae6d1857e01d60c45"
+    ],
+    "item_ids": [
+      "item-113e41a438f0"
+    ],
+    "seller_ids": [
+      "seller-113e41a438f0"
+    ],
+    "payment_references": [
+      "1"
+    ],
+    "shipment_ids": []
+  },
+  "entity_resolution": {
+    "status": "resolved",
+    "resolved_order_ids": [
+      "113e41a438f06ffae6d1857e01d60c45"
+    ],
+    "rejected_candidates": [],
+    "confidence": 1.0
+  },
+  "customer_context": {
+    "customer_unique_id": null,
+    "related_order_ids": []
+  },
+  "shipment_analysis": {
+    "verdict": "insufficient_evidence",
+    "late_seller_ids": [],
+    "timeline_complete": false
+  },
+  "payment_analysis": {
+    "verdict": "reconciled",
+    "captured_total_brl": 97.0,
+    "refunded_total_brl": null,
+    "refundable_total_brl": 97.0
+  },
+  "root_cause_analysis": {
+    "ranked_causes": [
+      {
+        "cause_code": "CANCELED_ORDER_PAID",
+        "rank": 1
+      }
+    ],
+    "responsible_parties": [
+      {
+        "party_type": "platform",
+        "party_id": null
+      }
+    ]
+  },
+  "evidence_refs": [
+    "ev_4lvaa7Mj4Elizd86jYBezB8LFuBWtC_e",
+    "ev_4EK78y_kdZ5Wna_ek8-gGsWl0zvsTgG0",
+    "ev_Wt5iESI_X-_eQCUNKbtGT21UZK7W8s4r",
+    "ev_2JPZBiqk-S8-FmzF7xdLWkURenjQSVnU",
+    "ev_rYxJXKcZM2lUcfjGk6i-3CjPm5XHBZkl",
+    "ev_7boKmgDjRryBJmdSYmEowLrZCOKv6BUd",
+    "ev_h3Oj2peTPQ7oqt-tUMlQnvSfvmfqdBZV",
+    "ev_5ex24FXIjrY5fHWhzqrOWYBlZ0ShmiSl"
+  ],
+  "data_conflicts": [],
+  "financial_resolution": {
+    "currency": "BRL",
+    "recommended_refund_brl": 79.0,
+    "refund_lines": [
+      {
+        "reason_code": "canceled_order_paid",
+        "amount_brl": 79.0,
+        "entity_id": "113e41a438f06ffae6d1857e01d60c45"
+      }
+    ]
+  },
+  "resolution_actions": [
+    "issue_refund"
+  ],
+  "claim_assessments": [
+    {
+      "claim_id": "claim-090-a",
+      "verdict": "insufficient_evidence",
+      "confidence": 0.12,
+      "evidence_refs": [
+        "ev_7boKmgDjRryBJmdSYmEowLrZCOKv6BUd"
+      ]
+    },
+    {
+      "claim_id": "claim-090-b",
+      "verdict": "supported",
+      "confidence": 0.86,
+      "evidence_refs": [
+        "ev_h3Oj2peTPQ7oqt-tUMlQnvSfvmfqdBZV",
+        "ev_5ex24FXIjrY5fHWhzqrOWYBlZ0ShmiSl",
+        "ev_rYxJXKcZM2lUcfjGk6i-3CjPm5XHBZkl"
+      ]
+    }
+  ]
+}
