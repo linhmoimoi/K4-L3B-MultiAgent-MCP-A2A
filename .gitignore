@@ -22,9 +22,9 @@ inputs/*
 !inputs/.gitkeep
 # outputs/*
 !outputs/.gitkeep
-traces/*
+# traces/*
 !traces/.gitkeep
-dist/*
+# dist/*
 !dist/.gitkeep
 *.zip
 *.log
